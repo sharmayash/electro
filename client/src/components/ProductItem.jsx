@@ -26,9 +26,7 @@ function ProductItem(props) {
   const classes = useStyles();
   const { products } = props;
 
-  if (products === undefined || products === null) {
-    return <h1>Loading ...</h1>;
-  } else {
+  if (products) {
     return products.map(product => (
       <Grid
         item
